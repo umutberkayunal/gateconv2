@@ -1,50 +1,45 @@
 import React from 'react';
-import { View, Image, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const Header = () => {
   return (
-    <ImageBackground
-      source={require('C:/gateconv2/assets/background.png')}
-      style={styles.background}
-    >
-      <View style={styles.container}>
+    <View style={styles.container}>
+      <TouchableOpacity>
+        <Image
+          source={require('C:/gateconv2/assets/profileicon.png')}
+          style={styles.profileicon}
+        />
+      </TouchableOpacity>
+
+      <TouchableOpacity>
+        <Image
+          style={styles.logo}
+          source={require('C:/gateconv2/assets/header-logo.png')}
+        />
+      </TouchableOpacity>
+
+      <View style={styles.iconsContainer}>
         <TouchableOpacity>
           <Image
-            source={require('C:/gateconv2/assets/profileicon.png')}
-            style={styles.profileicon}
+            source={require('C:/gateconv2/assets/likeicon.png')}
+            style={styles.likeicon}
           />
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Image
-            style={styles.logo}
-            source={require('C:/gateconv2/assets/header-logo.png')}
-          />
+          <View style={styles.unreadBadge}>
+            <Text style={styles.unreadBadgeText}>11</Text>
+          </View>
         </TouchableOpacity>
 
-        <View style={styles.iconsContainer}>
-          <TouchableOpacity>
-            <Image
-              source={require('C:/gateconv2/assets/likeicon.png')}
-              style={styles.likeicon}
-            />
-          </TouchableOpacity>
-
-          <TouchableOpacity>
-            <View style={styles.unreadBadge}>
-              <Text style={styles.unreadBadgeText}>11</Text>
-            </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity>
-            <Image
-              source={require('C:/gateconv2/assets/messageicon.png')}
-              style={styles.messageicon}
-            />
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity>
+          <Image
+            source={require('C:/gateconv2/assets/messageicon.png')}
+            style={styles.messageicon}
+          />
+        </TouchableOpacity>
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 
@@ -83,10 +78,6 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
   },
-  background: {
-    flex: 1,
-    resizeMode: 'cover',
-  },
   unreadBadge: {
     backgroundColor: '#FF3250',
     position: 'absolute',
@@ -96,10 +87,12 @@ const styles = StyleSheet.create({
     height: 18,
     borderRadius: 25,
     alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 100,
   },
   unreadBadgeText: {
-    color: '#FFFFFF',
-    fontSize: 12,
+    color: 'white',
+    fontWeight: '600',
   },
 });
 
