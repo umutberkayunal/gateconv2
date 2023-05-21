@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, SafeAreaView, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import Header from '../components/home/Header';
 import Stories from '../components/home/Stories';
+import Post from '../components/home/Post';
+import { POSTS } from '../data/posts';
 
 const HomeScreen = () => {
   return (
@@ -12,6 +14,11 @@ const HomeScreen = () => {
       <SafeAreaView style={styles.container}>
         <Header />
         <Stories />
+        <ScrollView>
+            {POSTS.map((post, index) =>(
+          <Post post={post} key={index}/>
+          ))}
+        </ScrollView>
       </SafeAreaView>
     </ImageBackground>
   );
