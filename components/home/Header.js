@@ -13,9 +13,9 @@ const Header = () => {
 
       <TouchableOpacity>
         <Image
-          style={styles.logo}
           source={require('C:/gateconv2/assets/header-logo.png')}
-        />
+          style={styles.logo}       
+       />
       </TouchableOpacity>
 
       <View style={styles.iconsContainer}>
