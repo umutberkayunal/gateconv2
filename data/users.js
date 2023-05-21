@@ -1,12 +1,34 @@
 export const USERS = [
 {
-    user: 'cleverqazi',
+    user: '@gamer001',
     image:
-    'https://i.cnnturk.com/i/cnnturk/75/0x555/55cb018e8685761f08995d92.jpg'
+    'https://i.hizliresim.com/iohjak6.png'
 },
 {
-    user: 'sugashaw',
+    user: '@gamer002',
     image:
-    'https://i.imgur.com/dxjd7FB.jpg',
+    'https://i.hizliresim.com/terb2ah.png',
 },
+{
+    user: '@gamer003',
+    image:
+    'https://i.hizliresim.com/iohjak6.png'
+},
+{
+    user: '@gamer004',
+    image:
+    'https://i.hizliresim.com/biovj9p.png',
+},
+{
+    user: '@gamer005',
+    image:
+    'https://i.hizliresim.com/67hb5zt.png',
+},
+{
+    user: '@gamer006',
+    image:
+    'https://i.hizliresim.com/67hb5zt.png',
+},
+
+
 ]

@@ -7,15 +7,17 @@ const Stories = () => {
     <View style={{marginBottom: 5 }}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {USERS.map((story, index) => (
-                <View key={index.toString()} style={styles.storyContainer}>
+                <View key={index} style={{alignItems: 'center'}}>
              <Image source={{ uri: story.image }}
-            style={[styles.story, { marginTop: -50 }, {zIndex: 1}]}/>
-            <Text style={{ color:'white' }}>{story.user}</Text>
+            style={[styles.story, { marginTop: 0 }]}/>
+            <Text style={{ color:'black' }}>{
+              story.user.length > 11 ? story.user.slice(0, 10).toLowerCase() +
+              '...' : story.user.toLowerCase()}
+            </Text>
             </View>
             ))}
 
         </ScrollView>
-      <Text style={{ color: 'white'}}>STORIES</Text>
     </View>
   )
 }
@@ -27,7 +29,8 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         marginLeft: 6,
         borderWidth: 3,
-        borderColor: '#ff8501',
+        borderColor: 'gray',
+        zIndex: 9999,
     },
 })
 

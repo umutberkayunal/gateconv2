@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     alignItems: 'center',
     justifyContent: 'center',
-    zIndex: 100,
   },
   unreadBadgeText: {
     color: 'white',
