@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, StyleSheet, ImageBackground, ScrollView } fro
 import Header from '../components/home/Header';
 import Stories from '../components/home/Stories';
 import Post from '../components/home/Post';
+import NavBar from '../components/home/NavBar';
 import { POSTS } from '../data/posts';
 
 const HomeScreen = () => {
@@ -19,6 +20,7 @@ const HomeScreen = () => {
           <Post post={post} key={index}/>
           ))}
         </ScrollView>
+        <NavBar />
       </SafeAreaView>
     </ImageBackground>
   );
