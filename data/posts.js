@@ -17,5 +17,21 @@ export const POSTS = [
             },
         ],
     },
-    
+    {
+        imageurl: 'https://i.hizliresim.com/biovj9p.png',
+        user: USERS[1].user,
+        likes: 3822,
+        caption: 'Check this screenshot!',
+        profile_picture: USERS[0].image,
+        comments: [
+            {
+                user: '@gamer003',
+                comment: 'Wow! Looks Fire!'
+            },
+            {
+                user: '@gamer004',
+                comment: 'Is this game live on Cosmos?'
+            },
+        ],
+    },
 ]
